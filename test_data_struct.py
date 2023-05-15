@@ -105,6 +105,8 @@ def retry_3times_relies_prev_multiple(driver, last_type_find, last_css, next_typ
             last_el = driver.find_elements(last_type_find, last_css)
             last_el.click()
             time.sleep(2)
+            element = driver.find_elements(next_type_find, next_css)
+            return element
 
 def retry_3times_relies_prev_single(driver, last_type_find, last_css, next_type_find, next_css):
     element = None
@@ -115,21 +117,49 @@ def retry_3times_relies_prev_single(driver, last_type_find, last_css, next_type_
             element = driver.find_element(next_type_find, next_css)
             return element
         except: #attempt to refresh
-            driver.refresh()
-            last_el = driver.find_element(last_type_find, last_css)
-            last_el.click()
-            time.sleep(2)
+            try:
+                driver.refresh()
+                time.sleep(2)
+                last_el = driver.find_element(last_type_find, last_css)
+                last_el.click()
+                time.sleep(2)
+                element = driver.find_element(next_type_find, next_css)
+                return element
+            except:
+                pass
 
+def better_find_element(driver, url, css, type_find, pural:bool=False):
+    # if "p_" in type_find:
+    #     pural = True
+    # try: 
+    #     if type_find[:1] == "p_":
+    #         type_find = type_find.split("p_")
+    # except:
+    #     pass
+    if pural:
+        elements = driver.find_elements(type_find, css)
+        print()
+        return elements
+    elif type_find == "direct-link":
+        driver.get(url+"/"+css)
+        return
+    else:
+        element = driver.find_element(type_find, css)
+        return element
+
+    
+    pass
 
 def test_ss_list(website_url:str, ss_list:list, driver):
     driver.get(website_url)
-    time.sleep(4)
+    time.sleep(5)
     #input()
     count = 0
     refresh_mem =[]
     for csss in ss_list:
         type_find, css = str(csss).split(";")
         special = None
+        done_special = False
         try:
             special, type_find = type_find.split(":")
         except:
@@ -140,51 +170,57 @@ def test_ss_list(website_url:str, ss_list:list, driver):
         print(type_find)
         if special == "refresh_sens":
             refresh_mem.append((type_find, css))
-        
-        if special == "rand": #randomly index result
-            try:
-                elements = driver.find_elements(type_find, css)
-            except:
-                if special == "relies_prev":#check if in a state that requires to run last command
-                    last_type_find, last_css = refresh_mem.pop()
-                    elements = retry_3times_relies_prev_multiple(driver, last_type_find, last_css, type_find, css)
 
-            rand_ind = randint(1,len(elements))-1
-            element = elements[rand_ind]
-
-
-        elif special: # specific indexed result
-            if special[:2] == "ind":
+        if special: # specific indexed result
+            if special[:3] == "ind_":
+                done_special=True
                 try:
-                    elements = driver.find_elements(type_find, css)
+                    #elements = driver.find_elements(type_find, css)
+                    elements = better_find_element(driver, website_url, css, type_find, True)
                 except:
                     if special == "relies_prev":#check if in a state that requires to run last command
                         last_type_find, last_css = refresh_mem.pop()
                         elements = retry_3times_relies_prev_multiple(driver, last_type_find, last_css, type_find, css)
                     #elements = driver.find_elements(type_find, css)
-                ind = special.split("ind")
+                ind = int(special.split("ind_"))
                 print(ind)
                 element = elements[ind]
-        else:
+            elif special == "rand_ind": #randomly index result
+                done_special=True
+                try:
+                    #elements = driver.find_elements(type_find, css)
+                    elements = better_find_element(driver, website_url, css, type_find, pural=True)
+                except:
+                    if special == "relies_prev":#check if in a state that requires to run last command
+                        last_type_find, last_css = refresh_mem.pop()
+                        elements = retry_3times_relies_prev_multiple(driver, last_type_find, last_css, type_find, css)
+
+                rand_ind = randint(1,len(elements))-1
+                element = elements[rand_ind]
+        if not done_special:
             try:
-                element = driver.find_elements(type_find, css)
-            except: #attempt to refresh
+                #element = driver.find_element(type_find, css)
+                element = better_find_element(driver, website_url, css, type_find)
+            except Exception as e: #attempt to refresh
+                print(e)
                 if special == "relies_prev": #check if in a state that requires to run last command
                     last_type_find, last_css = refresh_mem.pop()
                     element = retry_3times_relies_prev_single(driver, last_type_find, last_css, type_find, css)
-                
-        element.click()
-        time.sleep(3)
+                    
+        try:
+            if type_find != "direct-link": 
+                element.click()
+        except:
+            print("FAILED TO GET ELEMENT AFTER RETRIES")
+            break
+        time.sleep(2)
     input("OUT")
 
 if __name__ == "__main__":
-    #c_driver = create_chrome_driver(True, False)
-    c_driver = create_edge_driver(True, False)
+    #c_driver = create_edge_driver(ublock=True, headless=False)
+    c_driver = create_chrome_driver(ublock=True, headless=False)
     website_to_test = "https://www.youtube.com/"
-    #csss_list = ["css selector;style-scope yt-icon-button[aria-label='Guide']", ""]
-    seleniumsselector_list = ["refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending", "rand:id;title-wrapper"]
-    #sequential_xpaths_to_test = ['//*[@id="guide-icon"]', '/html/body/ytd-app/div[1]/tp-yt-app-drawer/div[2]/div/div[2]/div[2]/ytd-guide-renderer/div[1]/ytd-guide-section-renderer[3]/div/ytd-guide-entry-renderer[1]', '/html/body/ytd-app/div[1]/tp-yt-app-drawer/div[2]/div/div[2]/div[2]/ytd-guide-renderer/div[1]/ytd-guide-section-renderer[3]/div/ytd-guide-entry-renderer[1]/a']
-    #test_xpath_list(website_to_test, sequential_xpaths_to_test, e_driver)
+    seleniumsselector_list = ["rand_ind:css selector;ytd-rich-item-renderer"] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
+    #seleniumsselector_list = ["direct-link;signin", "partial link text;Create account"]
     test_ss_list(website_to_test, seleniumsselector_list, c_driver)
-    #test_struct("https://www.youtube.com/")
     pass
