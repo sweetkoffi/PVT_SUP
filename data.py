@@ -30,20 +30,24 @@ WEBSITE_LIST = {"https://www.youtube.com/":
                 {"specifics":"ablock=true;",
                  "main_menu": 'class name;wrapper',
                  "endpoints":
-                 { 
-                  "news":'direct-link;news',
-                  "reviews":'direct-link;reviews',
-                  "hardware":'direct-link;hardware',
-                  "BestOf":'direct-link;best-of',
-                  "top":'direct-link;the-top-100-pc-games-2022',
-
-
+                 {
+                     
+                
                  },
                   "sub-endpoints":
                   {
-                      "main_menu":{"news":'relies_prev:partial link text;news',
-                       "more":{"main_menu":"class name;has-submenu"}       
-                  }
+                      "main_menu":{
+                            "news":'partial link text;news',
+                            "reviews":'partial link text;reviews',
+                            "hardware":'partial link text;hardware',
+                            "BestOf":'partial link text;best-of',
+                            "top100":'partial link text;the-top-100-pc-games-2022',
+                            },
+                    "hardware":{"hardware":"rand_ind:class name;listingresult"
+                                }
+
+                        
+                  
                  }
                 }
 }
