@@ -144,7 +144,6 @@ def better_find_element(driver, url, css, type_find, pural:bool=False):
     #     pass
     if pural:
         elements = driver.find_elements(type_find, css)
-        print()
         return elements
     elif type_find == "direct-link":
         driver.get(url+"/"+css)
@@ -161,10 +160,12 @@ def test_ss_list(website_url:str, ss_list:list, driver):
     refresh_mem =[]
     for csss in ss_list:
         type_find, css = str(csss).split(";")
-        special = None
+        #special = None
+        special_list = [None]
         done_special = False
         try:
             special, type_find = type_find.split(":")
+            special_list = special.split["~"]
         except:
             pass
         print(count)
@@ -172,28 +173,29 @@ def test_ss_list(website_url:str, ss_list:list, driver):
         #input()
         print(type_find)
         if special: # specific indexed result
-            if special == "refresh_sens":
+            if "refresh_sens" in special_list:
                 refresh_mem.append((type_find, css))
-            if special[:3] == "ind_":
+            #if special[:3] == "ind_":
+            if any("ind_" in string for string in special_list):
                 done_special=True
                 try:
                     #elements = driver.find_elements(type_find, css)
                     elements = better_find_element(driver, website_url, css, type_find, True)
                 except:
-                    if special == "relies_prev":#check if in a state that requires to run last command
+                    if "relies_prev" in special_list:#check if in a state that requires to run last command
                         last_type_find, last_css = refresh_mem.pop()
                         elements = retry_3times_relies_prev_multiple(driver, website_url, last_type_find, last_css, type_find, css)
                     #elements = driver.find_elements(type_find, css)
                 ind = int(special.split("ind_"))
                 print(ind)
                 element = elements[ind]
-            elif special == "rand_ind": #randomly index result
+            if "rand_ind" in special_list: #randomly index result
                 done_special=True
                 try:
                     #elements = driver.find_elements(type_find, css)
                     elements = better_find_element(driver, website_url, css, type_find, pural=True)
                 except:
-                    if special == "relies_prev":#check if in a state that requires to run last command
+                    if "relies_prev" in special_list:#check if in a state that requires to run last command
                         last_type_find, last_css = refresh_mem.pop()
                         elements = retry_3times_relies_prev_multiple(driver, website_url, last_type_find, last_css, type_find, css)
 
@@ -205,7 +207,7 @@ def test_ss_list(website_url:str, ss_list:list, driver):
                 element = better_find_element(driver, website_url, css, type_find)
             except Exception as e: #attempt to refresh
                 print(e)
-                if special == "relies_prev": #check if in a state that requires to run last command
+                if "relies_prev" in special_list: #check if in a state that requires to run last command
                     last_type_find, last_css = refresh_mem.pop()
                     element = retry_3times_relies_prev_single(driver, website_url, last_type_find, last_css, type_find, css)
                     
