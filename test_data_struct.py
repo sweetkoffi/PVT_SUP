@@ -154,7 +154,7 @@ def better_find_element(driver, url, css, type_find, pural:bool=False):
 
 def test_ss_list(website_url:str, ss_list:list, driver):
     driver.get(website_url)
-    time.sleep(5)
+    time.sleep(2)
     #input()
     count = 0
     refresh_mem =[]
@@ -172,11 +172,11 @@ def test_ss_list(website_url:str, ss_list:list, driver):
         count+=1
         #input()
         print(type_find)
-        if special: # specific indexed result
+        if special_list: # specific indexed result
             if "refresh_sens" in special_list:
                 refresh_mem.append((type_find, css))
             #if special[:3] == "ind_":
-            if any("ind_" in string for string in special_list):
+            if "ind_" in special_list:
                 done_special=True
                 try:
                     #elements = driver.find_elements(type_find, css)
@@ -222,10 +222,11 @@ def test_ss_list(website_url:str, ss_list:list, driver):
 
 if __name__ == "__main__":
     #c_driver = create_edge_driver(ublock=True, headless=False)
-    #c_driver = create_chrome_driver(ublock=True, headless=False)
-    website_to_test = "https://www.youtube.com/"
-    seleniumsselector_list = ["rand_ind:css selector;ytd-rich-item-renderer"] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
+    c_driver = create_chrome_driver(ublock=False, headless=False)
+    #Website_to_test = "https://www.youtube.com/"
+    Website_to_test = "https://www.pcgamer.com/"
+    seleniumsselector_list = ["partial link text;News", "rand_ind:id;"] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
     #seleniumsselector_list = ["direct-link;signin", "partial link text;Create account"]
-    #test_ss_list(website_to_test, seleniumsselector_list, c_driver)
-    test_struct("https://www.youtube.com/")
+    test_ss_list(Website_to_test, seleniumsselector_list, c_driver)
+    #test_struct("https://www.pcgamer.com/")
     pass
