@@ -26,12 +26,11 @@ WEBSITE_LIST = {"https://www.youtube.com/":
                  }  
                 }
 
-{"https://www.pcgamer.com/":
+{"https://www.pcgamer.com/": # Problem with this website , need to move the mouse
                 {"specifics":"ablock=true;",
-                 "main_menu": 'class name;wrapper',
                  "endpoints":
                  {
-                     
+                     "Popup_close":'class name;exit-intent__close-button'
                 
                  },
                   "sub-endpoints":
@@ -41,16 +40,54 @@ WEBSITE_LIST = {"https://www.youtube.com/":
                             "reviews":'partial link text;reviews',
                             "hardware":'partial link text;hardware',
                             "BestOf":'partial link text;best-of',
-                            "top100":'partial link text;the-top-100-pc-games-2022',
+                            "top100":'partial link text;the-top-100-pc-games-2022'
                             },
                     "hardware":{"hardware":"rand_ind:class name;listingresult"
                                 }
 
-                        
-                  
+                 
                  }
                 }
 }
 
+{"https://apache.org/": # Working ON
+                {"specifics":"ablock=true;",
+                 "endpoints":
+                 {
+                     "about":'class name;caret',
+                     "donation":'link text;Make a Donation'
+                     "theApacheWay"
 
+                 },
+                  "sub-endpoints":
+                  {
+                      "about":{
+                                "overview":'link text;Overview',
+                                "process":'link text;Process',
+                                "governance":'link text;Governance',
+                                "theApacheWay":'link text;The Apache Way',
+                                "membership":'link text;Membership',
+                                "community":'link text;Community',
+                                "diversity":'link text;Diversity & Inclusion',
+                                "codeofconduct":'link text;Code of Conduct',
+                                "glossary":'link text;Glossary',
+                                "aboutourname":'link text;About Our Name',
+                                "faq":'link text;FAQ',
+                                "supportAppache":'link text;Media/Analysts',
+                                "media":'link text;Contact',
+                                "contact":'link text;Support Apache'
+                            },
 
+                    "Donation":{"donatenow": {
+                                    "donation":'link text;Donate Now',
+                                    "creditCard":'link text;Via ACH',
+                                    "creditCard":'link text;Via Paypal',
+                                    "creditCard":'link text;Via Credit Card',
+                                }
+                                
+                 
+                 }
+                }
+                }
+
+}

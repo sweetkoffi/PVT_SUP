@@ -224,8 +224,11 @@ if __name__ == "__main__":
     #c_driver = create_edge_driver(ublock=True, headless=False)
     c_driver = create_chrome_driver(ublock=False, headless=False)
     #Website_to_test = "https://www.youtube.com/"
-    Website_to_test = "https://www.pcgamer.com/"
-    seleniumsselector_list = ["partial link text;hardware"] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
+    Website_to_test = "https://apache.org/"
+    #seleniumsselector_list = ["class name;exit-intent__close-button","partial link text;hardware"]
+    #seleniumsselector_list = ["partial link text;news"] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
+    seleniumsselector_list = ["link text;Make a Donation"]
+    #seleniumsselector_list = ["partial link text;hardware"]
     #seleniumsselector_list = ["direct-link;signin", "partial link text;Create account"]
     test_ss_list(Website_to_test, seleniumsselector_list, c_driver)
     #test_struct("https://www.pcgamer.com/")
