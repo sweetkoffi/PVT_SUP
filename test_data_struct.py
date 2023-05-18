@@ -154,7 +154,7 @@ def better_find_element(driver, url, css, type_find, pural:bool=False):
 
 def test_ss_list(website_url:str, ss_list:list, driver):
     driver.get(website_url)
-    time.sleep(2)
+    time.sleep(5)
     #input()
     count = 0
     refresh_mem =[]
@@ -224,9 +224,10 @@ if __name__ == "__main__":
     #c_driver = create_edge_driver(ublock=True, headless=False)
     c_driver = create_chrome_driver(ublock=False, headless=False)
     #Website_to_test = "https://www.youtube.com/"
-    Website_to_test = "https://www.pcgamer.com/"
-    seleniumsselector_list = ["partial link text;News", "rand_ind:id;"] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
+    Website_to_test = "https://apache.org/"
+    #seleniumsselector_list = ["refresh_sens:class name;exit-intent__close-button"]
+    seleniumsselector_list = ["partial link text;Projects","relies_preview:partial link text;Independence"] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
     #seleniumsselector_list = ["direct-link;signin", "partial link text;Create account"]
     test_ss_list(Website_to_test, seleniumsselector_list, c_driver)
-    #test_struct("https://www.pcgamer.com/")
+  
     pass
