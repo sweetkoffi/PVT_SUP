@@ -167,7 +167,10 @@ def test_ss_list(website_url:str, ss_list:list, driver):
             special, type_find = type_find.split(":")
             special_list = special.split["~"]
         except:
-            pass
+            try:
+                special_list = special
+            except: 
+                    pass
         print(count)
         count+=1
         #input()
@@ -224,12 +227,31 @@ if __name__ == "__main__":
     #c_driver = create_edge_driver(ublock=True, headless=False)
     c_driver = create_chrome_driver(ublock=False, headless=False)
     #Website_to_test = "https://www.youtube.com/"
-    Website_to_test = "https://apache.org/"
+    Website_to_test = "https://www.theatlantic.com/"
     #seleniumsselector_list = ["class name;exit-intent__close-button","partial link text;hardware"]
     #seleniumsselector_list = ["partial link text;news"] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
-    seleniumsselector_list = ["link text;Make a Donation"]
+    seleniumsselector_list = ["refresh_sens:class name;NavHamburgerButton_box__Sq9Ip","relies_preview:partial link text;Events",'css selector;a[aria-label="All"][data-label="all"].c-btn.c-btn--secondary.is-inactive']
     #seleniumsselector_list = ["partial link text;hardware"]
     #seleniumsselector_list = ["direct-link;signin", "partial link text;Create account"]
     test_ss_list(Website_to_test, seleniumsselector_list, c_driver)
-    #test_struct("https://www.pcgamer.com/")
-    pass
+    #Website_list = [WEBSITE_LIST]
+    #selenium2sselector_list = []
+    #Website_data = Website_list[0]
+    #product_endpoint = Website_data["https://apache.org/"]["endpoints"]["about"]
+    #selenium2sselector_list.append(product_endpoint)
+    #selenium2sselector_list.append(product_endpoint)
+    
+
+
+    #product_data = Website_data["https://apache.org/"]["sub-endpoints"]["about"]
+    #for product_key, product_value in product_data.items():
+        #selenium2sselector_list[-1] = product_value
+        #test_ss_list(Website_to_test, selenium2sselector_list[-1], c_driver)
+        #test_ss_list(Website_to_test, selenium2sselector_list[-1], c_driver)
+        #print(selenium2sselector_list[-1])
+        #print(selenium2sselector_list[0])
+        #test_ss_list(Website_to_test,selenium2sselector_list, c_driver)
+    #print(selenium2sselector_list)
+    #test_ss_list(Website_to_test, selenium2sselector_list[0] & selenium2sselector_list[-1], c_driver)
+    #test_struct("https://apache.org/")
+    
