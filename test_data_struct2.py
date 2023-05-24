@@ -151,10 +151,19 @@ def better_find_element(driver, url, css, type_find, pural:bool=False):
     else:
         element = driver.find_element(type_find, css)
         return element
+    
+def check_substring(lst:list, substring):
+    if lst == None:
+        return False, 1
+    for string in lst:
+        if substring in string:
+            ret_val = string[len(substring):]
+            return True, ret_val
+    return False, 1
 
 def test_ss_list(website_url:str, ss_list:list, driver):
     driver.get(website_url)
-    time.sleep(2)
+    time.sleep(9)
     #input()
     count = 0
     refresh_mem =[]
@@ -176,10 +185,24 @@ def test_ss_list(website_url:str, ss_list:list, driver):
         #input()
         print(type_find)
         if special_list: # specific indexed result
+            try:
+                scroll_present, scroll_val = check_substring(special_list, "scroll_")
+            except:
+                scroll_present = False
+                scroll_val = 0
+            try:
+                ind_present, ind_val = check_substring(special_list, "ind_")
+            except:
+                ind_present = False
+                ind_val = 0
             if "refresh_sens" in special_list:
                 refresh_mem.append((type_find, css))
             #if special[:3] == "ind_":
-            if "ind_" in special_list:
+            if scroll_present:
+                print(scroll_val)
+                scroll_pix = "window.scrollBy(0,"+scroll_val+")"
+                driver.execute_script(scroll_pix, "")
+            if ind_present:
                 done_special=True
                 try:
                     #elements = driver.find_elements(type_find, css)
@@ -189,7 +212,7 @@ def test_ss_list(website_url:str, ss_list:list, driver):
                         last_type_find, last_css = refresh_mem.pop()
                         elements = retry_3times_relies_prev_multiple(driver, website_url, last_type_find, last_css, type_find, css)
                     #elements = driver.find_elements(type_find, css)
-                ind = int(special.split("ind_"))
+                ind = int(ind_val)
                 print(ind)
                 element = elements[ind]
             if "rand_ind" in special_list: #randomly index result
@@ -227,10 +250,10 @@ if __name__ == "__main__":
     #c_driver = create_edge_driver(ublock=True, headless=False)
     c_driver = create_chrome_driver(ublock=False, headless=False)
     #Website_to_test = "https://www.youtube.com/"
-    Website_to_test = "https://www.theatlantic.com/"
+    Website_to_test = "https://www.huawei.com/"
     #seleniumsselector_list = ["class name;exit-intent__close-button","partial link text;hardware"]
     #seleniumsselector_list = ["partial link text;news"] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
-    seleniumsselector_list = ["refresh_sens:class name;NavHamburgerButton_box__Sq9Ip","relies_preview:partial link text;Events",'css selector;a[aria-label="All"][data-label="all"].c-btn.c-btn--secondary.is-inactive']
+    seleniumsselector_list = ["refresh_sens:partial link text;Business Products","relies_prev~ind_1:css selector;ul.list-unstyled li"]#class name;exit-intent__close-button
     #seleniumsselector_list = ["partial link text;hardware"]
     #seleniumsselector_list = ["direct-link;signin", "partial link text;Create account"]
     test_ss_list(Website_to_test, seleniumsselector_list, c_driver)

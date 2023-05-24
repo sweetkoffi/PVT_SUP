@@ -20,7 +20,7 @@ WEBSITE_LIST = {
                                   },
                       "music":{"video":'rand_ind:css selector;ytd-video-renderer'
                                },
-                      "gaming":{"video":"rand_ind:css selector;ytd-video-renderer"
+                      "gaming":{"video":'rand_ind:css selector;ytd-video-renderer'
                           
                       },
                   }
@@ -40,7 +40,7 @@ WEBSITE_LIST = {
                 "top100": 'partial link text;the-top-100-pc-games-2022'
             },
             "hardware": {
-                "hardware": "rand_ind:class name;listingresult"
+                "hardware": 'rand_ind:class name;listingresult'
             }
         }
     },
@@ -48,130 +48,130 @@ WEBSITE_LIST = {
                 {"specifics":"ablock=true;",
                  "endpoints":
                  {
-                     "about":'partial link text;About',
-                     "donation":'partial link text;Make a Donation',
-                     "theApacheWay":'partial link text;The Apache Way',
-                     "joinUs":'partial link text;Join Us',
-                     "downaloads":'partial link text;downloads',
-                     "projects":'partial link text;Projects',
-                     "people":'partial link text;People',
-                     "community":'partial link text;Community',
-                     "secondInfrast":'partial link text;Insfrastructure',
-                     "sponsors":'partial link text;Sponsors',
-                     "license":'partial link text;License'
+                     "about":'refresh_sens:partial link text;About',
+                     "donation":'refresh_sens:partial link text;Make a Donation',
+                     "theApacheWay":'refresh_sens:partial link text;The Apache Way',
+                     "joinUs":'refresh_sens:partial link text;Join Us',
+                     "downaloads":'refresh_sens:partial link text;downloads',
+                     "projects":'refresh_sens:partial link text;Projects',
+                     "people":'refresh_sens:partial link text;People',
+                     "community":'refresh_sens:partial link text;Community',
+                     "secondInfrast":'refresh_sens:partial link text;Insfrastructure',
+                     "sponsors":'refresh_sens:partial link text;Sponsors',
+                     "license":'refresh_sens:partial link text;License'
                      
 
                  },
                   "sub-endpoints":
                   {
                       "about":{
-                                "overview":'relies_preview:partial link text;Overview',
-                                "process":'relies_preview: partial link text;Process',
-                                "governance":'relies_preview: partial link text;Governance',
-                                "theapache":'relies_preview: partial link text;The Apache Way',
-                                "membership":'relies_preview: partial link text;Membership',
-                                "community":'relies_preview: partial link text;Community',
-                                "diversity":'relies_preview: partial link text;Diversity & Inclusion',
-                                "codeofconduct":'relies_preview: partial link text;Code of Conduct',
-                                "glossary":'relies_preview: partial link text;Glossary',
-                                "aboutourname":'relies_preview: partial link text;About Our Name',
-                                "faq":'relies_preview: partial link text;FAQ',
-                                "supportappache":'relies_preview: partial link text;Media/Analysts',
-                                "media":'relies_preview: partial link text;Contact',
-                                "contact":'relies_preview: partial link text;Support Apache'
+                                "overview":'relies_prev:partial link text;Overview',
+                                "process":'relies_prev: partial link text;Process',
+                                "governance":'relies_prev: partial link text;Governance',
+                                "theapache":'relies_prev: partial link text;The Apache Way',
+                                "membership":'relies_prev: partial link text;Membership',
+                                "community":'relies_prev: partial link text;Community',
+                                "diversity":'relies_prev: partial link text;Diversity & Inclusion',
+                                "codeofconduct":'relies_prev: partial link text;Code of Conduct',
+                                "glossary":'relies_prev: partial link text;Glossary',
+                                "aboutourname":'relies_prev: partial link text;About Our Name',
+                                "faq":'relies_prev: partial link text;FAQ',
+                                "supportappache":'relies_prev: partial link text;Media/Analysts',
+                                "media":'relies_prev: partial link text;Contact',
+                                "contact":'relies_prev: partial link text;Support Apache'
                             },
                     "Donation":{
                      "donateNow": {
-                                    "donateNow":'relies_preview: partial link text;Donate Now',
-                                    "viaAch":'relies_preview: partial link text;Via ACH',
-                                    "viaPaypal":'relies_preview: partial link text;Via Paypal',
-                                    "creditCard":'relies_preview: partial link text;Via Credit Card',
+                                    "donateNow":'relies_prev: partial link text;Donate Now',
+                                    "viaAch":'relies_prev: partial link text;Via ACH',
+                                    "viaPaypal":'relies_prev: partial link text;Via Paypal',
+                                    "creditCard":'relies_prev: partial link text;Via Credit Card',
                                 },
-                                "buySwag":'relies_preview: partial link text;Buy Swag', 
-                                "AsfSponsorship":'relies_preview: partial link text;ASF Sponsorship',
-                                "targetedSposor":'relies_preview: partial link text;Targeted Sponsorship',
-                                "CorporateGiving":'relies_preview: partial link text;Corporate Giving',
+                                "buySwag":'relies_prev: partial link text;Buy Swag', 
+                                "AsfSponsorship":'relies_prev: partial link text;ASF Sponsorship',
+                                "targetedSposor":'relies_prev: partial link text;Targeted Sponsorship',
+                                "CorporateGiving":'relies_prev: partial link text;Corporate Giving',
 
                      "theApacheWay":{
-                                    "sustainOpenSourc":'relies_preview: partial link text;Sustainable Open Source',
-                                    "howItWorks":'relies_preview: partial link text;How it Works',
-                                    "Merit":'relies_preview:partial link text;Merit',
+                                    "sustainOpenSourc":'relies_prev: partial link text;Sustainable Open Source',
+                                    "howItWorks":'relies_prev: partial link text;How it Works',
+                                    "Merit":'relies_prev:partial link text;Merit',
                                     "theapachewaysub":'direct-link;theapacheway',
-                                    "Success at Apache":'relies_preview: partial link text;Success at Apache'
+                                    "Success at Apache":'relies_prev: partial link text;Success at Apache'
                          
                                     },
-                     "joinUs":{"gettingStarted":'relies_preview: partial link text;Getting Started',
-                               "helpWanted":'relies_preview: partial link text;Help Wanted',
-                               "ApacheCon":'relies_preview: partial link text;ApacheCon', 
-                               "comEvents":'relies_preview: partial link text;Community Events',
-                               "travelAssistance":'relies_preview: partial link text;Travel Assistance',
-                               "summerOfCode":'relies_preview: partial link text;Summer of Code',
-                               "etiquette":'relies_preview: partial link text;Etiquette'  
+                     "joinUs":{"gettingStarted":'relies_prev: partial link text;Getting Started',
+                               "helpWanted":'relies_prev: partial link text;Help Wanted',
+                               "ApacheCon":'relies_prev: partial link text;ApacheCon', 
+                               "comEvents":'relies_prev: partial link text;Community Events',
+                               "travelAssistance":'relies_prev: partial link text;Travel Assistance',
+                               "summerOfCode":'relies_prev: partial link text;Summer of Code',
+                               "etiquette":'relies_prev: partial link text;Etiquette'  
                                },
-                     "downloads":{"distribution":'relies_preview:partial link text;Distribution',
-                                  "releases":'relies_preview:partial link text;Releases',
-                                  "infrastStatus":'relies_preview: partial link text;Infrastructure Status',
-                                  "infrastStatistics":'relies_preview: partial link text;Infrastructure Statistics'
+                     "downloads":{"distribution":'relies_prev:partial link text;Distribution',
+                                  "releases":'relies_prev:partial link text;Releases',
+                                  "infrastStatus":'relies_prev: partial link text;Infrastructure Status',
+                                  "infrastStatistics":'relies_prev: partial link text;Infrastructure Statistics'
                          
                      },
                      "projects":{
-                                 "projectList":'relies_preview:partial link text;Project List',
-                                 "howThetWork": 'relies_preview:partial link text;How they work',
-                                 "independence": 'relies_preview:partial link text;Independence',
-                                 "dateFounded": 'relies_preview:partial link text;Date Founded',
-                                 "names": 'relies_preview:partial link text;Names',
-                                 "categories": 'relies_preview:partial link text;Categories',
-                                 "languages": 'relies_preview:partial link text;Languages',
-                                 "statistics": 'relies_preview:partial link text;Statistics',
-                                 "apacheIncub": 'relies_preview:partial link text;Apache Incubator',
-                                 "helpWanted": 'relies_preview:partial link text;Help Wanted',
-                                 "brandManag": 'relies_preview:partial link text;Brand Management',
-                                 "glossaryOfTherms": 'relies_preview:partial link text;Glossary of Terms',         
+                                 "projectList":'relies_prev:partial link text;Project List',
+                                 "howThetWork": 'relies_prev:partial link text;How they work',
+                                 "independence": 'relies_prev:partial link text;Independence',
+                                 "dateFounded": 'relies_prev:partial link text;Date Founded',
+                                 "names": 'relies_prev:partial link text;Names',
+                                 "categories": 'relies_prev:partial link text;Categories',
+                                 "languages": 'relies_prev:partial link text;Languages',
+                                 "statistics": 'relies_prev:partial link text;Statistics',
+                                 "apacheIncub": 'relies_prev:partial link text;Apache Incubator',
+                                 "helpWanted": 'relies_prev:partial link text;Help Wanted',
+                                 "brandManag": 'relies_prev:partial link text;Brand Management',
+                                 "glossaryOfTherms": 'relies_prev:partial link text;Glossary of Terms',         
                      },
                      # select on the project endoint - new sub-endpoint to subdomain-name :projects.apache.org 
                      "projectList":{"overviewProject":'ind_1:css selector;ul.list-unstyled:nth-of-type(1) li a'},
                      "people":{
-                                    "roles":'relies_preview: partial link text;Roles',
-                                    "members":'relies_preview: partial link text;Members',
-                                    "committers":'relies_preview: partial link text;Committers',
-                                    "boardOfDir":'relies_preview: partial link text;Board of Directors',
-                                    "offiersProject":'relies_preview: partial link text;Offiers & Project VPs',
-                                    "diversityInclusion":'relies_preview: partial link text;Diversity & Inclusion',
-                                    "codeOfCOnduct":'relies_preview: partial link text;Code of Conduct',
-                                    "committerDir":'relies_preview: partial link text;Committer Directory',
-                                    "HeatMap":'relies_preview: partial link text;Heat Map',
+                                    "roles":'relies_prev: partial link text;Roles',
+                                    "members":'relies_prev: partial link text;Members',
+                                    "committers":'relies_prev: partial link text;Committers',
+                                    "boardOfDir":'relies_prev: partial link text;Board of Directors',
+                                    "offiersProject":'relies_prev: partial link text;Offiers & Project VPs',
+                                    "diversityInclusion":'relies_prev: partial link text;Diversity & Inclusion',
+                                    "codeOfCOnduct":'relies_prev: partial link text;Code of Conduct',
+                                    "committerDir":'relies_prev: partial link text;Committer Directory',
+                                    "HeatMap":'relies_prev: partial link text;Heat Map',
                      },
                      "community":{
-                         "commDev":'relies_preview: partial link text;Community Development',
-                         "codeOfConduct":'relies_preview: partial link text;Code of Conduct',
-                         "getInvol":'relies_preview: partial link text;Get Involved',
-                         "mentoring":'relies_preview: partial link text;Mentoring',
-                         "helpWanted":'relies_preview: partial link text;Help Wanted',
-                         "commEvents":'relies_preview: partial link text;Community Events',
-                         "faq":'relies_preview: partial link text;FAQ',
-                         "mailingList":'relies_preview: partial link text;Mailing Lists',
+                         "commDev":'relies_prev: partial link text;Community Development',
+                         "codeOfConduct":'relies_prev: partial link text;Code of Conduct',
+                         "getInvol":'relies_prev: partial link text;Get Involved',
+                         "mentoring":'relies_prev: partial link text;Mentoring',
+                         "helpWanted":'relies_prev: partial link text;Help Wanted',
+                         "commEvents":'relies_prev: partial link text;Community Events',
+                         "faq":'relies_prev: partial link text;FAQ',
+                         "mailingList":'relies_prev: partial link text;Mailing Lists',
                      },
                      "infrastructure":{
-                         "infOver":'relies_preview: partial link text;Infra overview',
-                         "polAndTool":'relies_preview: partial link text;Policiers and Tools',
-                         "cwiki":'relies_preview: partial link text;CWiki',
+                         "infOver":'relies_prev: partial link text;Infra overview',
+                         "polAndTool":'relies_prev: partial link text;Policiers and Tools',
+                         "cwiki":'relies_prev: partial link text;CWiki',
                          
                      },
                      "license":{
-                         "apacheLicense":'relies_preview: partial link text;Apache License 2.0',
-                         "licensFaq":'relies_preview: partial link text;Licensing FAQ',
-                         "contribLiAgre":'relies_preview: partial link text;Contributor License Agreements',
-                         "softwGrant":'relies_preview: partial link text;Software Grants',
-                         "tradeMark":'relies_preview: partial link text;Trademarks',
-                         "exports":'relies_preview: partial link text;Exports',
+                         "apacheLicense":'relies_prev: partial link text;Apache License 2.0',
+                         "licensFaq":'relies_prev: partial link text;Licensing FAQ',
+                         "contribLiAgre":'relies_prev: partial link text;Contributor License Agreements',
+                         "softwGrant":'relies_prev: partial link text;Software Grants',
+                         "tradeMark":'relies_prev: partial link text;Trademarks',
+                         "exports":'relies_prev: partial link text;Exports',
                          
                      },
                       "sponsors":{
-                         "sponTheAsf":'relies_preview: partial link text;Sponsor the ASF',
-                         "sponThanks":'relies_preview: partial link text;Sponsor thanks',
-                         "corporateGiv":'relies_preview: partial link text;Corporate Giving',
-                         "indivDonations":'relies_preview: partial link text;Individual Donations',
-                         "buyStuff":'relies_preview: partial link text;Buy Stuff'
+                         "sponTheAsf":'relies_prev: partial link text;Sponsor the ASF',
+                         "sponThanks":'relies_prev: partial link text;Sponsor thanks',
+                         "corporateGiv":'relies_prev: partial link text;Corporate Giving',
+                         "indivDonations":'relies_prev: partial link text;Individual Donations',
+                         "buyStuff":'relies_prev: partial link text;Buy Stuff'
                      }
                
                  }
@@ -182,64 +182,223 @@ WEBSITE_LIST = {
                  "main_menu":'refresh_sens:class name;NavHamburgerButton_box__Sq9Ip',
                  "endpoints":
                  { 
-                  "popular":'partial link text;Popular',
-                  "latest": 'partial link text;Latest',
-                  "newsletters":'partial link text;Newsletters',
-                  "login":'partial link text;Sign In',
-                  "subscribe":'partial link text;Subscribe'
+                  "popular":'refresh_sens:partial link text;Popular',
+                  "latest": 'refresh_sens:partial link text;Latest',
+                  "newsletters":'refresh_sens:partial link text;Newsletters',
+                  "login":'refresh_sens:partial link text;Sign In',
+                  "subscribe":'refresh_sens:partial link text;Subscribe'
                 },
                   "sub-endpoints":
                   {
                       "main_menu":{
-                          "politics":'relies_preview: partial link text;Politics',
-                          "technology":'relies_preview: partial link text;Technology',
-                          "business":'relies_preview: partial link text;Business',
-                          "global":'relies_preview: partial link text;Global',
-                          "health":'relies_preview: partial link text;Business',
-                          "features":'relies_preview: partial link text;Features',
-                          "shadowland":'relies_preview: partial link text;Shadowland',
-                          "ideas":'relies_preview: partial link text;Ideas',
-                          "science":'relies_preview: partial link text;Science',
-                          "culture":'relies_preview: partial link text;Culture',
-                          "books":'relies_preview: partial link text;Books',
-                          "education":'relies_preview: partial link text;Education',
-                          "family":'relies_preview: partial link text;Family',
-                          "progress":'relies_preview: partial link text;Progress',
-                          "fiction":'relies_preview: partial link text;Fiction',
-                          "photo":'relies_preview: partial link text;Photo',
-                          "planet":'relies_preview: partial link text;Planet',
-                          "podcast":'relies_preview: partial link text;Podcasts',
-                          "projects":'relies_preview: partial link text;Projects',
-                          "events":'relies_preview: partial link text;Events',
-                          "explArchive":'relies_preview: partial link text;Explore The Atlantic Archive',
-                          "playCrossword":'relies_preview: partial link text;Play The Atlantic crossword',
-                          "latestIssue":'relies_preview: partial link text;Latest Issue',
-                          "pastIssue":'relies_preview: partial link text;Past Issues',
-                          "giveGift":'relies_preview: partial link text;Give a Gift',  
+                          "politics":'relies_prev: partial link text;Politics',
+                          "technology":'relies_prev: partial link text;Technology',
+                          "business":'relies_prev: partial link text;Business',
+                          "global":'relies_prev: partial link text;Global',
+                          "health":'relies_prev: partial link text;Business',
+                          "features":'relies_prev: partial link text;Features',
+                          "shadowland":'relies_prev: partial link text;Shadowland',
+                          "ideas":'relies_prev: partial link text;Ideas',
+                          "science":'relies_prev: partial link text;Science',
+                          "culture":'relies_prev: partial link text;Culture',
+                          "books":'relies_prev: partial link text;Books',
+                          "education":'relies_prev: partial link text;Education',
+                          "family":'relies_prev: partial link text;Family',
+                          "progress":'relies_prev: partial link text;Progress',
+                          "fiction":'relies_prev: partial link text;Fiction',
+                          "photo":'relies_prev: partial link text;Photo',
+                          "planet":'relies_prev: partial link text;Planet',
+                          "podcast":'relies_prev: partial link text;Podcasts',
+                          "projects":'relies_prev: partial link text;Projects',
+                          "events":'relies_prev: partial link text;Events',
+                          "explArchive":'relies_prev: partial link text;Explore The Atlantic Archive',
+                          "playCrossword":'relies_prev: partial link text;Play The Atlantic crossword',
+                          "latestIssue":'relies_prev: partial link text;Latest Issue',
+                          "pastIssue":'relies_prev: partial link text;Past Issues',
+                          "giveGift":'relies_prev: partial link text;Give a Gift',  
                       },
 
-                      "politics":{"article":"rand_ind:class name;LandingRiver_promoItem__LuiRv"},
-                      "technology":{"article":"rand_ind:class name;LandingRiver_promoItem__LuiRv"},
-                      "business":{"article":"rand_ind:class name;LandingRiver_promoItem__LuiRv"},
-                      "global":{"article":"rand_ind:class name;LandingRiver_promoItem__LuiRv"},
-                      "health":{"article":"rand_ind:class name;LandingRiver_promoItem__LuiRv"},
-                      "features":{"article":"rand_ind:class name;LandingRiver_promoItem__LuiRv"},
-                      "shadowland":{"article":"rand_ind:class name;LandingRiver_promoItem__LuiRv"},
-                      "ideas":{"article":"rand_ind:class name;LandingRiver_promoItem__LuiRv"},
-                      "science":{"article":"rand_ind:class name;LandingRiver_promoItem__LuiRv"},
-                      "culture":{"article":"rand_ind:class name;LandingRiver_promoItem__LuiRv"},
-                      "books":{"article":"rand_ind:class name;LandingRiver_promoItem__LuiRv"},
-                      "education":{"article":"rand_ind:class name;LandingRiver_promoItem__LuiRv"},
-                      "family":{"article":"rand_ind:class name;LandingRiver_promoItem__LuiRv"},
-                      "progress":{"article":"rand_ind:class name;LandingRiver_promoItem__LuiRv"},
-                      "fiction":{"article":"rand_ind:class name;LandingRiver_promoItem__LuiRv"},
-                      "photo":{"article":"rand_ind:class name;article"},
-                      "podcast":{"article":"rand_ind:class name;LandingRiver_promoItem__LuiRv"},
-                      #"events":{"article":"rand_ind:class name;LandingRiver_promoItem__LuiRv"},
-                      
-                      
+                      "politics":{"article":'relies_prev~rand_ind:class name;LandingRiver_promoItem__LuiRv'},
+                      "technology":{"article":'relies_prev~rand_ind:class name;LandingRiver_promoItem__LuiRv'},
+                      "business":{"article":'relies_prev~rand_ind:class name;LandingRiver_promoItem__LuiRv'},
+                      "global":{"article":'relies_prev~rand_ind:class name;LandingRiver_promoItem__LuiRv'},
+                      "health":{"article":'relies_prev~rand_ind:class name;LandingRiver_promoItem__LuiRv'},
+                      "features":{"article":'relies_prev~rand_ind:class name;LandingRiver_promoItem__LuiRv'},
+                      "shadowland":{"article":'relies_prev~rand_ind:class name;LandingRiver_promoItem__LuiRv'},
+                      "ideas":{"article":'relies_prev~rand_ind:class name;LandingRiver_promoItem__LuiRv'},
+                      "science":{"article":'relies_prev~rand_ind:class name;LandingRiver_promoItem__LuiRv'},
+                      "culture":{"article":'relies_prev~rand_ind:class name;LandingRiver_promoItem__LuiRv'},
+                      "books":{"article":'relies_prev~rand_ind:class name;LandingRiver_promoItem__LuiRv'},
+                      "education":{"article":'relies_prev~rand_ind:class name;LandingRiver_promoItem__LuiRv'},
+                      "family":{"article":'relies_prev~rand_ind:class name;LandingRiver_promoItem__LuiRv'},
+                      "progress":{"article":'relies_prev~rand_ind:class name;LandingRiver_promoItem__LuiRv'},
+                      "fiction":{"article":'relies_prev~rand_ind:class name;LandingRiver_promoItem__LuiRv'},
+                      "photo":{"article":'relies_prev~rand_ind:class name;article'},
+                      "podcast":{"article":'relies_prev~rand_ind:class name;LandingRiver_promoItem__LuiRv'},
+                      #"events":{"article":'rand_ind:class name;LandingRiver_promoItem__LuiRv'},
+                      "explArchive":{"issue":'relies_prev~rand_ind:css selector;ul.MagazineDecadeCarousel_carousel__DE0j_ a'},
+                      #"playCrossword":{"puzzle":'rand_ind:css selector;ul.crossList li a"}
+                     "latestIssue":{"issue":'relies_prev~rand_ind:css selector;ul.MagazineDecadeCarousel_carousel__DE0j_ a'},
+                     "pastIssue":{"issue":'relies_prev~rand_ind:css selector;a.BackIssuesGrid_item__b4V1e'}
 
                   }
                 },
+                #Website : wayfair.com / Blocage / Captcha
+                 "https://www.wayfair.com/":
+                {"specifics":"ablock=true;",
+                 "main_menu":'refresh_sens:class name;_1ihiofm0',
+                 "endpoints":
+                 { 
+                  "login-page": 'class name;_15h04s00',#ask to verify , Captcha                  
+                 
+                 },
+                  "sub-endpoints":
+                  {
+                      "main_menu":{"departements":'relies_prev: partial link text;Departement' #ask to verify , Captcha   
+                   
+                  }
+                },
+                },
+                 #Website : ancestry.com
+                 "https://www.ancestry.com/":
+                {"specifics":"ablock=true;",
+                 "endpoints":
+                 { 
+                  "login-page":'refresh_sens:partial link text;LOG IN',
+                  "genealogy":'refresh_sens:partial link text;GENEALOGY',
+                  "dna":'refresh_sens:partial link text;DNA',
+                  "freetrial":'refresh_sens:partial link text;FREE TRIAL',
+                  "espagnol":'refresh_sens:partial link text;ES'
+
+                 
+                 },
+                  "sub-endpoints":
+                  {
+                      "genealogy":{"trees":'relies_prev: partial link text;Trees',
+                                   "search":'relies_prev: partial link text;Search',
+                                   "dna":'relies_prev: partial link text;DNA',
+                                   "explore":'relies_prev: partial link text;Explore',
+                                   "help":'relies_prev: partial link text;Help',
+                                   "extras":'relies_prev: partial link text;Extras',
+                                   "subscribe":'relies_prev: partial link text;Subscribe'
+                  }, 
+                  "trees":{"familyhistory":'reliews_prev:partial link text;Family History Learning Hub',
+                           "uploadgedcom":'reliews_prev:partial link text;Upload a GEDCOM ',}
+                },
+                  "search":{"allcollections":'reliews_prev:partial link text;All Collections ',
+                            "censusvoter":'reliews_prev:partial link text;Census & Voter Lists ',
+                            "birthmarriagedeath":'reliews_prev:partial link text;Birth, Marriage & Death ',
+                            "immigration":'reliews_prev:partial link text;Immigration & Travel ',
+                            "publicmember":'reliews_prev:partial link text;Public Member Trees ',
+                            "military":'reliews_prev:partial link text;Military',
+                            "cardcatalog":'reliews_prev:partial link text;Card Catalog',
+                            "membersearch":'reliews_prev:partial link text;Member Search', 
+                  },
+                   "dna":{"ancestrydna":'reliews_prev:partial link text;AncestryDNA®',
+                            "activatekit":'reliews_prev:partial link text;Activate a Kit',
+                            "learninghub":'reliews_prev:partial link text;AncestryDNA® Learning Hub',
+                            "includedinresults":'reliews_prev:partial link text;What’s Included in Your Results',
+                            "familydna":'reliews_prev:partial link text;DNA + Family Trees',
+                            "howdnaworks":'reliews_prev:partial link text;How AncestryDNA® Works',
+                  },
+                   "help":{"supportcenter":'reliews_prev:partial link text;Support Center',
+                            "community":'reliews_prev:partial link text;Community',
+                            "messageboards":'reliews_prev:partial link text;Message Boards',
+                            "hireandexpert":'reliews_prev:partial link text;Hire an Expert',
+                            "sitestatus":'reliews_prev:partial link text;Site Status',
+                  },
+                   "extras":{"apps":'reliews_prev:partial link text;iOS & Android Apps',
+                            "photobooks":'reliews_prev:partial link text;Photo Books & Posters',
+                            "progenealogists":'reliews_prev:partial link text;ProGenealogists',
+                            "ancestryacademy":'reliews_prev:partial link text;Ancestry Academy',
+                            "gift":'reliews_prev:partial link text;Gift Memberships',
+                            "ancestrylab":'reliews_prev:partial link text;Ancestry Lab',
+                            "heritagetravel":'reliews_prev:partial link text;Heritage Travel',
+                  },
+
+                },
+                #Website : Tom's Guide --- Some problems with 2 popups ( delay for the second pop up to appear - longer than what expected for a retry )
+                #under certains circonstances - works ---- css selector;button.exit-intent__close-button","id;onesignal-slidedown-cancel-button","class name;menu-item-more","ind_1:css selector;ul.sub-menu li
+                  "https://www.tomsguide.com/":
+                {"specifics":"ablock=true;",
+                 "endpoints":
+                 { 
+                  "bestpicks":'direct-link;best-picks',
+                  "news":'direct-link;news',
+                  "reviews":'direct-link;reviews',
+                  "howtos":'partial link text;how-to',
+                  "phones":'partial link text;phones',
+                  "streaming":'partial link text;Streaming',
+                  "deals":'direct-link;deals',
+                  "more":'refresh_sens:class name;menu-item-more'
+                  
+                 },
+                  "sub-endpoints":
+                  {
+                      "more":{
+                          "antivirus":'ind_1:css selector;ul.sub-menu li',
+                          "audio":''
+                          
+                      },
+                 
+                  }
+                },  
+                # Website : java.com --- Iframe at the begining -- driver.switch_to.frame("frame_name") -- then the selector
+                "https://www.java.com/":
+                {"specifics":"ablock=true;",
+                 "endpoints":
+                 { 
+                  "popupbypass":'class mame;required'
+                 },
+                  "sub-endpoints":
+                  {
+                
+                 
+                  }
+                },
+                #Huawei.com
+                "https://www.java.com/":
+                {"specifics":"ablock=true;",
+                 "endpoints":
+                 { 
+                  "consumer":'refresh_sens:partial link text;Consumer Products',
+                  "business":'refresh_sens:partial link text;Business Products',
+                  "support":'refresh_sens:partial link text;Support',
+                  "partners":'refresh_sens:partial link text;Partners & Developers',
+                  "about":'refresh_sens:partial link text;About Huawei',
+                  "login":'partial link text;Log in'
+                 },
+                  "sub-endpoints":
+                  {
+                        "consumer":{
+                            "smartphone":'relies_prev~ind_1:css selector;ul.row li',
+                            "pc":'relies_prev~ind_2:css selector;ul.row li',
+                            "tablet":'relies_prev~ind_3:css selector;ul.row li',
+                            "wearable":'relies_prev~ind_4:css selector;ul.row li',
+                            "audio":'relies_prev~ind_5:css selector;ul.row li',
+                            "router":'relies_prev~ind_6:css selector;ul.row li',
+                            "emui":'relies_prev~ind_7:css selector;ul.row li',
+                            "accessories":'relies_prev~ind_8:css selector;ul.row li',
+                            "allproducts":'relies_prev~ind_9:css selector;ul.row li',
+                            "consumerwebsite":'relies_prev:partial link text;Consumer Website'
+                        },
+                        "business":{
+                            "carriernetwork":'relies_prev~ind_1:css selector;ul.list-unstyled li a'
+                            
+                        },
+                          "support":{
+                            
+                        },
+                          "partners":{
+                            
+                        },
+                          "about":{
+                            
+                        },
+
+                 
+                  }
+                }, 
 }
+
 
