@@ -66,19 +66,19 @@ WEBSITE_LIST = {
                   {
                       "about":{
                                 "overview":'relies_preview:partial link text;Overview',
-                                "process":'relies_preview: partial link text;Process',
-                                "governance":'relies_preview: partial link text;Governance',
-                                "theapache":'relies_preview: partial link text;The Apache Way',
-                                "membership":'relies_preview: partial link text;Membership',
-                                "community":'relies_preview: partial link text;Community',
-                                "diversity":'relies_preview: partial link text;Diversity & Inclusion',
-                                "codeofconduct":'relies_preview: partial link text;Code of Conduct',
-                                "glossary":'relies_preview: partial link text;Glossary',
-                                "aboutourname":'relies_preview: partial link text;About Our Name',
-                                "faq":'relies_preview: partial link text;FAQ',
-                                "supportappache":'relies_preview: partial link text;Media/Analysts',
-                                "media":'relies_preview: partial link text;Contact',
-                                "contact":'relies_preview: partial link text;Support Apache'
+                                "process":'relies_preview:partial link text;Process',
+                                "governance":'relies_preview:partial link text;Governance',
+                                "theapache":'relies_preview:partial link text;The Apache Way',
+                                "membership":'relies_preview:partial link text;Membership',
+                                "community":'relies_preview:partial link text;Community',
+                                "diversity":'relies_preview:partial link text;Diversity & Inclusion',
+                                "codeofconduct":'relies_preview:partial link text;Code of Conduct',
+                                "glossary":'relies_preview:partial link text;Glossary',
+                                "aboutourname":'relies_preview:partial link text;About Our Name',
+                                "faq":'relies_preview:partial link text;FAQ',
+                                "supportappache":'relies_preview:partial link text;Media/Analysts',
+                                "media":'relies_preview:partial link text;Contact',
+                                "contact":'relies_preview:partial link text;Support Apache'
                             },
                     "Donation":{
                      "donateNow": {
