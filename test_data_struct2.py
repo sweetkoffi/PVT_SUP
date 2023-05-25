@@ -163,7 +163,7 @@ def check_substring(lst:list, substring):
 
 def test_ss_list(website_url:str, ss_list:list, driver):
     driver.get(website_url)
-    time.sleep(9)
+    time.sleep(3)
     #input()
     count = 0
     refresh_mem =[]
@@ -250,10 +250,10 @@ if __name__ == "__main__":
     #c_driver = create_edge_driver(ublock=True, headless=False)
     c_driver = create_chrome_driver(ublock=False, headless=False)
     #Website_to_test = "https://www.youtube.com/"
-    Website_to_test = "https://www.huawei.com/"
+    Website_to_test = "https://www.wayfair.com/"
     #seleniumsselector_list = ["class name;exit-intent__close-button","partial link text;hardware"]
     #seleniumsselector_list = ["partial link text;news"] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
-    seleniumsselector_list = ["refresh_sens:partial link text;Business Products","relies_prev~ind_1:css selector;ul.list-unstyled li"]#class name;exit-intent__close-button
+    seleniumsselector_list = ["ind_1:css selector;ul._1vzvuld1 li","ind_1:class name;MenuListItem"]#class name;exit-intent__close-button
     #seleniumsselector_list = ["partial link text;hardware"]
     #seleniumsselector_list = ["direct-link;signin", "partial link text;Create account"]
     test_ss_list(Website_to_test, seleniumsselector_list, c_driver)

@@ -27,7 +27,7 @@ WEBSITE_LIST = {
                 },  
                 # Website : pcGamer Problem with this website , need to move the mouse
                 "https://www.pcgamer.com/": {
-        "specifics": "ablock=true;",
+        "specifics": "Problem with this website , need to move the mouse for the popup to appear",
         "endpoints": {
             "Popup_close": 'class name;exit-intent__close-button'
         },
@@ -245,7 +245,7 @@ WEBSITE_LIST = {
                 },
                 #Website : wayfair.com / Blocage / Captcha
                  "https://www.wayfair.com/":
-                {"specifics":"ablock=true;",
+                {"specifics":"Captcha - for 2 consecutive request to the server - no impact for clic executing javascript",
                  "main_menu":'refresh_sens:class name;_1ihiofm0',
                  "endpoints":
                  { 
@@ -254,9 +254,21 @@ WEBSITE_LIST = {
                  },
                   "sub-endpoints":
                   {
-                      "main_menu":{"departements":'relies_prev: partial link text;Departement' #ask to verify , Captcha   
-                   
-                  }
+                      "main_menu":{"departements":'relies_prev: partial link text;Departement' #ask to verify , Captcha
+                  },
+                    "department":'rand_id:css selector;.jgOtFB a',
+                    "furniture":'refresh_sens:ind_1:css selector;ul._1vzvuld1 li',
+                    "bedding":'refresh_sens:ind_2:css selector;ul._1vzvuld1 li',
+                    "rugs":'refresh_sens:ind_3:css selector;ul._1vzvuld1 li',
+                    "decor":'refresh_sens:ind_4:css selector;ul._1vzvuld1 li',
+                    "organization":'refresh_sens:ind_5:css selector;ul._1vzvuld1 li',
+                    "ligthing":'refresh_sens:ind_6:css selector;ul._1vzvuld1 li',
+                    "kitchen":'refresh_sens:ind_7:css selector;ul._1vzvuld1 li',
+                    "baby":'refresh_sens:ind_8:css selector;ul._1vzvuld1 li',
+                    "homeimprov":'refresh_sens:ind_9:css selector;ul._1vzvuld1 li',
+                    "appliance":'refresh_sens:ind_10:css selector;ul._1vzvuld1 li',
+                    "pet":'refresh_sens:ind_11:css selector;ul._1vzvuld1 li',
+                    "holiday":'refresh_sens:ind_12:css selector;ul._1vzvuld1 li',
                 },
                 },
                  #Website : ancestry.com
@@ -320,7 +332,7 @@ WEBSITE_LIST = {
                 #Website : Tom's Guide --- Some problems with 2 popups ( delay for the second pop up to appear - longer than what expected for a retry )
                 #under certains circonstances - works ---- css selector;button.exit-intent__close-button","id;onesignal-slidedown-cancel-button","class name;menu-item-more","ind_1:css selector;ul.sub-menu li
                   "https://www.tomsguide.com/":
-                {"specifics":"ablock=true;",
+                {"specifics":"Mouse need to be moved for the popup to appear, Two popup - second - delay",
                  "endpoints":
                  { 
                   "bestpicks":'direct-link;best-picks',
@@ -345,7 +357,7 @@ WEBSITE_LIST = {
                 },  
                 # Website : java.com --- Iframe at the begining -- driver.switch_to.frame("frame_name") -- then the selector
                 "https://www.java.com/":
-                {"specifics":"ablock=true;",
+                {"specifics":"iframe need to be switched driver.switch_to.frame('frame_name');",
                  "endpoints":
                  { 
                   "popupbypass":'class mame;required'
@@ -357,7 +369,7 @@ WEBSITE_LIST = {
                   }
                 },
                 #Huawei.com
-                "https://www.java.com/":
+                "https://www.huawei.com/":
                 {"specifics":"ablock=true;",
                  "endpoints":
                  { 
@@ -383,20 +395,44 @@ WEBSITE_LIST = {
                             "consumerwebsite":'relies_prev:partial link text;Consumer Website'
                         },
                         "business":{
-                            "carriernetwork":'relies_prev~ind_1:css selector;ul.list-unstyled li a'
-                            
+                            "carriernetwork":'relies_prev~ind_1:css selector;.col-md-4:nth-of-type(1) ul li a',
+                            "enterprisenetworking":'relies_prev~ind_2:css selector;.col-md-4:nth-of-type(1) ul li a',
+                            "enterpriseoptical":'relies_prev~ind_3:css selector;.col-md-4:nth-of-type(1) ul li a',
+                            "enterprisewireless":'relies_prev~ind_4:css selector;.col-md-4:nth-of-type(1) ul li a',
+                            "datastorage":'relies_prev~ind_1:css selector;.col-md-4:nth-of-type(2) ul li a',
+                            "ascendcomputing":'relies_prev~ind_2:css selector;.col-md-4:nth-of-type(2) ul li a'
+                            #"enterpriseservices":'relies_prev~ind_1:css selector;.col-md-3:nth-of-type(1) ul li a',
+                            #"cloudservices":'relies_prev~ind_1:css selector;.col-md-3:nth-of-type(1) ul li a',
+                            #"telecom":'relies_prev~ind_1:css selector;.col-md-3:nth-of-type(1) ul li a',
+                            #"education":'relies_prev~ind_2:css selector;.col-md-3:nth-of-type(2) ul li a',
+                            #"finance":'relies_prev~ind_3:css selector;.col-md-3:nth-of-type(2) ul li a',
+                            #"electricpower":'relies_prev~ind_4:css selector;.col-md-3:nth-of-type(2) ul li a',
+                            #"manufacturing":'relies_prev~ind_5:css selector;.col-md-3:nth-of-type(2) ul li a',
+                            #"airport":'relies_prev~ind_6:css selector;.col-md-3:nth-of-type(2) ul li a',
+                            #"urbanrail":'relies_prev~ind_7:css selector;.col-md-3:nth-of-type(2) ul li a',
+                            #"seemore":'relies_prev~ind_8:css selector;.col-md-3:nth-of-type(2) ul li a'
                         },
                           "support":{
-                            
+                                    "findservicecenter":'relies_prev:partial link text;Find Service Center',
+                                    "productsupport":'relies_prev:partial link text;Product Support',
+                                    "productenviron":'relies_prev:partial link text;Product Environmental Information',
+                                    "callus":'relies_prev:partial link text;Call Us',
+                                    "emaailus":'relies_prev:partial link text;Email Us',
                         },
                           "partners":{
-                            
+                              "becompartner":'relies_prev:partial link text;Become Partner',
+                              "findpartner":'relies_prev:partial link text;Find a Partner',
+                              "technicalcertif":'relies_prev:partial link text;Technical Certification',
+                              "becomecustomer":'relies_prev:partial link text;Become Consumer Products Partner',
+                              "seemore":'relies_prev:partial link text;See More', 
                         },
                           "about":{
-                            
+                              "ourcompany":'relies_prev:partial link text;Our Company',
+                              "annualreports":'relies_prev:partial link text;Annual Reports',
+                              "corporategovernance":'relies_prev:partial link text;Corporate Governance',
+                              "executives":'relies_prev:partial link text;Executives',
+                              "contactus":'relies_prev:partial link text;Contact Us',
                         },
-
-                 
                   }
                 }, 
 }
