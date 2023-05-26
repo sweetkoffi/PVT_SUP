@@ -27,19 +27,19 @@ WEBSITE_LIST = {
                 },  
                 # Website : pcGamer Problem with this website , need to move the mouse
                 "https://www.pcgamer.com/": {
-        "specifics": "Problem with this website , need to move the mouse for the popup to appear",
-        "endpoints": {
-            "Popup_close": 'class name;exit-intent__close-button'
-        },
-        "sub-endpoints": {
-            "main_menu": {
-                "news": 'partial link text;news',
-                "reviews": 'partial link text;reviews',
-                "hardware": 'partial link text;hardware',
-                "BestOf": 'partial link text;best-of',
-                "top100": 'partial link text;the-top-100-pc-games-2022'
-            },
-            "hardware": {
+                "specifics": "Problem with this website , need to move the mouse for the popup to appear",
+                "endpoints": {
+                "Popup_close": 'class name;exit-intent__close-button'
+                },
+                "sub-endpoints": {
+                "main_menu": {
+                    "news": 'partial link text;news',
+                    "reviews": 'partial link text;reviews',
+                    "hardware": 'partial link text;hardware',
+                    "BestOf": 'partial link text;best-of',
+                    "top100": 'partial link text;the-top-100-pc-games-2022'
+                },
+             "hardware": {
                 "hardware": 'rand_ind:class name;listingresult'
             }
         }
@@ -245,7 +245,7 @@ WEBSITE_LIST = {
                 },
                 #Website : wayfair.com / Blocage / Captcha
                  "https://www.wayfair.com/":
-                {"specifics":"Captcha - for 2 consecutive request to the server - no impact for clic executing javascript",
+                {"specifics":"Captcha - no impact for clic executing javascript",
                  "main_menu":'refresh_sens:class name;_1ihiofm0',
                  "endpoints":
                  { 
@@ -257,19 +257,23 @@ WEBSITE_LIST = {
                       "main_menu":{"departements":'relies_prev: partial link text;Departement' #ask to verify , Captcha
                   },
                     "department":'rand_id:css selector;.jgOtFB a',
-                    "furniture":'refresh_sens:ind_1:css selector;ul._1vzvuld1 li',
-                    "bedding":'refresh_sens:ind_2:css selector;ul._1vzvuld1 li',
-                    "rugs":'refresh_sens:ind_3:css selector;ul._1vzvuld1 li',
-                    "decor":'refresh_sens:ind_4:css selector;ul._1vzvuld1 li',
-                    "organization":'refresh_sens:ind_5:css selector;ul._1vzvuld1 li',
-                    "ligthing":'refresh_sens:ind_6:css selector;ul._1vzvuld1 li',
-                    "kitchen":'refresh_sens:ind_7:css selector;ul._1vzvuld1 li',
-                    "baby":'refresh_sens:ind_8:css selector;ul._1vzvuld1 li',
-                    "homeimprov":'refresh_sens:ind_9:css selector;ul._1vzvuld1 li',
-                    "appliance":'refresh_sens:ind_10:css selector;ul._1vzvuld1 li',
-                    "pet":'refresh_sens:ind_11:css selector;ul._1vzvuld1 li',
-                    "holiday":'refresh_sens:ind_12:css selector;ul._1vzvuld1 li',
+                    "furniture":'refresh_sens~ind_1:css selector;ul._1vzvuld1 li',
+                    "bedding":'refresh_sens~ind_2:css selector;ul._1vzvuld1 li',
+                    "rugs":'refresh_sens~ind_3:css selector;ul._1vzvuld1 li',
+                    "decor":'refresh_sens~ind_4:css selector;ul._1vzvuld1 li',
+                    "organization":'refresh_sens~ind_5:css selector;ul._1vzvuld1 li',
+                    "ligthing":'refresh_sens~ind_6:css selector;ul._1vzvuld1 li',
+                    "kitchen":'refresh_sens~ind_7:css selector;ul._1vzvuld1 li',
+                    "baby":'refresh_sens~ind_8:css selector;ul._1vzvuld1 li',
+                    "homeimprov":'refresh_sens~ind_9:css selector;ul._1vzvuld1 li',
+                    "appliance":'refresh_sens~ind_10:css selector;ul._1vzvuld1 li',
+                    "pet":'refresh_sens~ind_11:css selector;ul._1vzvuld1 li',
+                    "holiday":'refresh_sens~ind_12:css selector;ul._1vzvuld1 li',
                 },
+                "furniture":{
+                    "living_room":'relies_prev~ind_1:css selector;div.blhUVp li ul li'
+                }
+
                 },
                  #Website : ancestry.com
                  "https://www.ancestry.com/":
@@ -349,8 +353,6 @@ WEBSITE_LIST = {
                   {
                       "more":{
                           "antivirus":'ind_1:css selector;ul.sub-menu li',
-                          "audio":''
-                          
                       },
                  
                   }
@@ -434,7 +436,82 @@ WEBSITE_LIST = {
                               "contactus":'relies_prev:partial link text;Contact Us',
                         },
                   }
+                },
+                # Website : CBCNEWS.COM
+                "https://www.nbcnews.com/":
+                {
+                "specifics":"ablock=true;",
+                 "main_menu":'refres_sens:css selector;div.local.h-h > div > button',
+                 "endpoints":
+                 { 
+                  "whatchnow":'partial link text;Watch Now',
+                  "about":'ind_1:css selector;footer ul li a'
+                 },
+                  "sub-endpoints":
+                  {
+                      "main_menu":{
+                          "usnews":'relies_prev:css selector;li.menu-list-item:nth-of-type(2) a',
+                          "politics":'relies_prev:css selector;li.menu-list-item:nth-of-type(3) a',
+                          "world":'relies_prev:css selector;li.menu-list-item:nth-of-type(4) a',
+                          "local":'relies_prev:css selector;li.menu-list-item:nth-of-type(5) a',
+                          "business":'relies_prev:css selector;li.menu-list-item:nth-of-type(6) a',
+                          "health":'relies_prev:css selector;li.menu-list-item:nth-of-type(7) a',
+                          "investigations":'relies_prev:css selector;li.menu-list-item:nth-of-type(8) a',
+                          "cultures":'relies_prev:css selector;li.menu-list-item:nth-of-type(9) a',
+                          "science":'relies_prev:css selector;li.menu-list-item:nth-of-type(10) a',
+                          "sports":'relies_prev:css selector;li.menu-list-item:nth-of-type(11) a',
+                          "tech":'relies_prev:css selector;li.menu-list-item:nth-of-type(12) a',
+                          "videos":'relies_prev:css selector;li.menu-list-item:nth-of-type(13) a',
+                          "photos":'relies_prev:css selector;li.menu-list-item:nth-of-type(14) a',
+                          "weather":'relies_prev:css selector;li.menu-list-item:nth-of-type(15) a',
+                          "select":'relies_prev:css selector;li.menu-list-item:nth-of-type(16) a',
+                          "asianamerica":'relies_prev:css selector;li.menu-list-item:nth-of-type(17) a',
+                          "nbcblk":'relies_prev:css selector;li.menu-list-item:nth-of-type(18) a',
+                          "nbclatino":'relies_prev:css selector;li.menu-list-item:nth-of-type(19) a',
+                          "nbcout":'relies_prev:css selector;li.menu-list-item:nth-of-type(20) a',
+                         
+                      },
+                      "usnews":{"articles":'relies_prev~rand_ind:css selector;ul.styles_items__Ldw92 li a'},
+                      "politics":{"articles":'relies_prev~rand_ind:css selector;ul.styles_items__Ldw92 li a'},
+                      "world":{"articles":'relies_prev~rand_ind:css selector;ul.styles_items__Ldw92 li a'},
+                      "local":{"articles":'relies_prev~rand_ind:css selector;ul.styles_items__Ldw92 li a'},
+                      "business":{"articles":'relies_prev~rand_ind:css selector;ul.styles_items__Ldw92 li a'},
+                      "health":{"articles":'relies_prev~rand_ind:css selector;ul.styles_items__Ldw92 li a'},
+                      "investigations":{"articles":'relies_prev~rand_ind:css selector;ul.styles_items__Ldw92 li a'},
+                      "cultures":{"articles":'relies_prev~rand_ind:css selector;ul.styles_items__Ldw92 li a'},
+                      "science":{"articles":'relies_prev~rand_ind:css selector;ul.styles_items__Ldw92 li a'},
+                      "sports":{"articles":'relies_prev~rand_ind:css selector;ul.styles_items__Ldw92 li a'},
+                      "tech":{"articles":'relies_prev~rand_ind:css selector;ul.styles_items__Ldw92 li a'}
+                  }
+                  },
+                "https://www.costco.com/":
+                {"specifics":"ablock=true;",
+                 "main_menu":'refresh_sens:id;navigation-dropdown',
+                 "endpoints":
+                 { 
+                  "closepopup":   '"id;closeEmailPopup"',
+                  "signin":'id;header_sign_in',
+                  #"productmainpage":''
+
+                 },
+                  "sub-endpoints":
+                  {
+                      "main_menu":{
+                          "appliances":'',
+                          "baby":'',
+                          "beauty":'',
+                          "clothing":'',
+                          "computers":'',
+                          "costconext":'',
+                          "electronics":'',
+                          "floral":'',
+                          "furniture":'',
+                          "gift":'',
+                          
+                      }
+                  }
                 }, 
+                 
 }
 
 

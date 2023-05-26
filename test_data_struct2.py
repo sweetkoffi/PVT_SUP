@@ -250,11 +250,11 @@ if __name__ == "__main__":
     #c_driver = create_edge_driver(ublock=True, headless=False)
     c_driver = create_chrome_driver(ublock=False, headless=False)
     #Website_to_test = "https://www.youtube.com/"
-    Website_to_test = "https://www.wayfair.com/"
+    Website_to_test = "https://www.costco.com/"
     #seleniumsselector_list = ["class name;exit-intent__close-button","partial link text;hardware"]
     #seleniumsselector_list = ["partial link text;news"] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
-    seleniumsselector_list = ["ind_1:css selector;ul._1vzvuld1 li","ind_1:class name;MenuListItem"]#class name;exit-intent__close-button
-    #seleniumsselector_list = ["partial link text;hardware"]
+    #seleniumsselector_list = ["refresh_sens~ind_1:css selector;ul._1vzvuld1 li","ind_1:css selector;div.blhUVp li ul li","rand_ind:css selector;div.blhUVp li ul li","rand_ind:css selector;div.blhUVp li ul li"]#class name;exit-intent__close-button
+    seleniumsselector_list = ["css selector;div.product-tile-set:nth-of-type(3)"]
     #seleniumsselector_list = ["direct-link;signin", "partial link text;Create account"]
     test_ss_list(Website_to_test, seleniumsselector_list, c_driver)
     #Website_list = [WEBSITE_LIST]
