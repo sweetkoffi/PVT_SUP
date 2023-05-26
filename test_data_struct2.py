@@ -249,13 +249,13 @@ def test_ss_list(website_url:str, ss_list:list, driver):
 if __name__ == "__main__":
     #c_driver = create_edge_driver(ublock=True, headless=False)
     c_driver = create_chrome_driver(ublock=False, headless=False)
-    #Website_to_test = "https://www.youtube.com/"
-    Website_to_test = "https://www.costco.com/"
+    #Website_to_test = "https://www.huawei.com/"
+    Website_to_test = "https://www.xbox.com/"
     #seleniumsselector_list = ["class name;exit-intent__close-button","partial link text;hardware"]
     #seleniumsselector_list = ["partial link text;news"] # "refresh_sens:id;guide-icon", "relies_prev:partial link text;Trending",
     #seleniumsselector_list = ["refresh_sens~ind_1:css selector;ul._1vzvuld1 li","ind_1:css selector;div.blhUVp li ul li","rand_ind:css selector;div.blhUVp li ul li","rand_ind:css selector;div.blhUVp li ul li"]#class name;exit-intent__close-button
-    seleniumsselector_list = ["css selector;div.product-tile-set:nth-of-type(3)"]
-    #seleniumsselector_list = ["direct-link;signin", "partial link text;Create account"]
+    seleniumsselector_list = ["refresh_sens:id;c-shellmenu_57"]
+    #seleniumsselector_list = ["direct-link;signin", "refresh_sens:partial link text;Business Products","relies_prev~ind_1:css selector;.col-md-4:nth-of-type(2) ul li a"]
     test_ss_list(Website_to_test, seleniumsselector_list, c_driver)
     #Website_list = [WEBSITE_LIST]
     #selenium2sselector_list = []

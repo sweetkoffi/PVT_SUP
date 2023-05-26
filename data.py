@@ -489,28 +489,61 @@ WEBSITE_LIST = {
                  "main_menu":'refresh_sens:id;navigation-dropdown',
                  "endpoints":
                  { 
-                  "closepopup":   '"id;closeEmailPopup"',
+                  "closepopup":'id;closeEmailPopup',
                   "signin":'id;header_sign_in',
+                  "grocery":'partial link text;Grocery',
+                  "sameday":'partial link text;Same-Day',
+                  "deals":'partial link text;Deals',
+                  "businessdelivery":'partial link text;Business Delivery',
+                  "optical":'partial link text;Optical',
+                  "pharmacy":'partial link text;Pharmacy',
+                  "services":'partial link text;Services',
+                  "photo":'partial link text;Photo',
+                  "travel":'partial link text;Travel',
+                  "membership":'partial link text;Membership',
+                  "locations":'partial link text;Locations',
                   #"productmainpage":''
 
                  },
                   "sub-endpoints":
                   {
                       "main_menu":{
-                          "appliances":'',
-                          "baby":'',
-                          "beauty":'',
-                          "clothing":'',
-                          "computers":'',
-                          "costconext":'',
-                          "electronics":'',
-                          "floral":'',
-                          "furniture":'',
-                          "gift":'',
-                          
-                      }
+                          "appliances":'relies_prev:partial link text;Appliances',
+                          #"baby":'css selector;div#level1-all-departments li:nth-child(2)',
+                          #"beauty":'relies_prev:partial link text;Beauty',
+                          #"clothing":'relies_prev:partial link text;Clothing, Luggage & Handbags',
+                          #"computers":'relies_prev:partial link text;Computers',
+                          #"costconext":'relies_prev:partial link text;Costco Next',
+                          #"electronics":'relies_prev:partial link text;Electronics',
+                          #"floral":'relies_prev:partial link text;Floral & Gift Baskets',
+                          #"furniture":'relies_prev:partial link text;Furniture',
+                          #"gift":'relies_prev:partial link text;Gift Cards & Tickets',
+                      }, 
+                      "grocery":{"random_categorie":'relies-prev~rand_ind:css selector;div.c_408102 div.row.gutter a'},
+                     
                   }
-                }, 
+                },
+                #Website : Xbox.com
+                 "https://www.xbox.com/":
+                {"specifics":"ablock=true;",
+                 "endpoints":
+                 { 
+                  "login-page":'id;meControl',
+                  "gamepass":'refresh_sens:id;c-shellmenu_57',
+                  "games":'refresh_sens:id;c-shellmenu_63',
+                  "devices":'refresh_sens:id;c-shellmenu_78',
+                  "play":'refresh_sens:id;c-shellmenu_96',
+                  "community":'refresh_sens:id;c-shellmenu_97',
+                  "support":'refresh_sens:id;xboxSupport',
+                  "myxbox":'refresh_sens:id;c-shellmenu_130',
+                  
+                 
+                 },
+                  "sub-endpoints":
+                  {
+                     
+                  }
+                },  
                  
 }
 
